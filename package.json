@@ -1,5 +1,5 @@
 {
-  "name": "austere-innocent-dogfish",
+  "name": "velocitybroadcast-reborn-site",
   "version": "1.0.0",
   "private": true,
   "homepage": "https://adzelfirestar.github.io/velocitybroadcast-reborn/",
@@ -10,19 +10,29 @@
     "react-router-dom": "^5.2.0",
     "react-helmet": "^6.1.0",
     "dangerous-html": "0.1.13"
-    // Optionally remove "next" if not needed
   },
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "postbuild": "npx rimraf docs/* && cp -r build/* docs/",
+    "postbuild": "npx rimraf docs/* && cp -r build/* docs/ && cp docs/index.html docs/404.html",
     "test": "craco test --env=jsdom",
     "eject": "craco eject"
   },
   "engines": {
     "node": ">=18.x"
   },
-  "browserslist": { ... },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
     "react-scripts": "^5.0.1"
   }
