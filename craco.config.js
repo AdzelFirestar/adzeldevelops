@@ -1,17 +1,10 @@
+// craco.config.js
 module.exports = {
-  reactScriptsVersion: "react-scripts",
-  style: {
-    css: {
-      loaderOptions: () => {
-        return {
-          url: false,
-        };
-      },
+  webpack: {
+    configure: (webpackConfig) => {
+      // This ensures all scripts, CSS, and images use the correct base path
+      webpackConfig.output.publicPath = '/velocitybroadcast-reborn/';
+      return webpackConfig;
     },
   },
-  // Add this function to modify build output directory
-  paths: function (paths, env) {
-    paths.appBuild = paths.appPath + '/docs';
-    return paths;
-  }
 };
