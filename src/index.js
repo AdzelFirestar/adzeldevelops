@@ -1,25 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {
-  HashRouter as Router,
-  Route,
-  Switch
-} from 'react-router-dom'
+// ./src/index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './style.css';
 
-import './style.css'
-import Home from './views/home'
-import NotFound from './views/not-found'
+// Import your main App component (you might need to adjust the path)
+import Home from './views/home';
 
-const App = () => {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        {/* Catch-all route for NotFound */}
-        <Route component={NotFound} />
-      </Switch>
-    </Router>
-  )
-}
+// Optional: Add routing later if you expand pages
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(
+  <React.StrictMode>
+    <Home />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
